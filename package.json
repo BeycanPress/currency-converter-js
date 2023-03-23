@@ -1,0 +1,37 @@
+{
+  "namespace": "beycanpress",
+  "name": "@beycanpress/currency-converter",
+  "version": "0.1.0",
+  "description": "It takes on the task of converting between fiat and cryptocurrencies.",
+  "license": "MIT",
+  "browser": "currency-converter.js",
+  "main": "currency-converter.js",
+  "module": "currency-converter.js",
+  "types": "currency-converter.js.d.ts",
+  "typings": "currency-converter.js",
+  "prepublishOnly": "webpack --mode=production",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build-w": "webpack --watch --mode=development"
+  },
+  "keywords": [
+    "Cryprocurrency",
+    "Converter"
+  ],
+  "author": "BeycanPress",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BeycanPress/currency-converter-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BeycanPress/currency-converter-js"
+  },
+  "homepage": "https://github.com/BeycanPress/currency-converter-js",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "axios": "^0.26.1"
+  }
+}
