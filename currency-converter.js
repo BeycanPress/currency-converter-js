@@ -40,6 +40,7 @@ let setApi = (api, apiKey = null) => {
  * @throws {Error}
  */
 let convert = (from, to, amount) => {
+    console.log(isSameCurrency(from, to));
     if (state.api == 'CoinMarketCap') {
         return convertWithCoinMarketCap(from, to, amount);
     } else if (state.api == 'CryptoCompare') {
@@ -131,12 +132,28 @@ let addStableCoins = (symbols) => {
     stableCoins = stableCoins.concat(symbols);
 }
 
+let isStableCoin = (from, to) => {
+    if (from.toUpperCase() == 'USD' || $to.toUpperCase() == 'USD') {
+        if (stableCoins.includes(from.toUpperCase()) || stableCoins.includes(to.toUpperCase())) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+let isSameCurrency = (from, to) => {
+    return from.toUpperCase() == to.toUpperCase();
+}
+
 
 module.exports = {
     state,
     setApi,
     convert,
+    isStableCoin,
     addStableCoins,
+    isSameCurrency,
     convertWithCoinMarketCap,
     convertWithCryptoCompare
 };

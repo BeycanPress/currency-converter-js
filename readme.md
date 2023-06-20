@@ -24,8 +24,8 @@ import CurrencyConverter from '@beycanpress/currency-converter';
 const CurrencyConverter = require('@beycanpress/currency-converter');
 
 
-// 'coinmarketcap' can only use in backend. And it needs an API key.
-let converter = new CurrencyConverter('cryptocompare | coinmarketcap', 'api key for coinmarketcap');
+// 'CoinMarketCap' can only use in backend. And it needs an API key.
+let converter = new CurrencyConverter('CryptoCompare | CoinMarketCap', 'api key for coinmarketcap');
 paymentPrice = await converter.convert('USD', 'BTC', 15 /* USD Price */);
 
 paymentPrice // BTC Price

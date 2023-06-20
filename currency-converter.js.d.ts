@@ -1,1 +1,1 @@
-declare module 'currency-converter';
+declare module '@beycanpress/currency-converter';
